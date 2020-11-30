@@ -7,39 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		751378CB25754AC00024350A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751378C925754AC00024350A /* LaunchScreen.storyboard */; };
 		7582FA39255C00A400061920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7582FA38255C00A400061920 /* AppDelegate.swift */; };
 		7582FA3B255C00A400061920 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7582FA3A255C00A400061920 /* SceneDelegate.swift */; };
-		7582FA3D255C00A400061920 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7582FA3C255C00A400061920 /* ViewController.swift */; };
+		7582FA3D255C00A400061920 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7582FA3C255C00A400061920 /* HomeViewController.swift */; };
 		7582FA42255C00A500061920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7582FA41255C00A500061920 /* Assets.xcassets */; };
-		7582FA45255C00A500061920 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7582FA43255C00A500061920 /* LaunchScreen.storyboard */; };
 		7582FA4D255C013000061920 /* GenericTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7582FA4C255C013000061920 /* GenericTableViewCell.xib */; };
 		7582FA51255C02EC00061920 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7582FA4F255C02EB00061920 /* SF-Pro.ttf */; };
 		7582FA52255C02EC00061920 /* SF-Pro-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7582FA50255C02EC00061920 /* SF-Pro-Italic.ttf */; };
 		7582FA78255C043B00061920 /* GenericTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7582FA77255C043B00061920 /* GenericTableViewCellController.swift */; };
-		7582FA7A255C060A00061920 /* AnimeListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7582FA79255C060A00061920 /* AnimeListTableView.swift */; };
-		7582FA7C255C064800061920 /* AnimeFavoritesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7582FA7B255C064800061920 /* AnimeFavoritesTableView.swift */; };
-		7582FA87255C087A00061920 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7582FA86255C087A00061920 /* Main.storyboard */; };
-		7582FA89255C08B800061920 /* AnimeFavoritesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7582FA88255C08B800061920 /* AnimeFavoritesView.xib */; };
-		7582FA8B255C090900061920 /* AnimeListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7582FA8A255C090900061920 /* AnimeListView.xib */; };
+		7582FA87255C087A00061920 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7582FA86255C087A00061920 /* Home.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		751378CA25754AC00024350A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Wotakoi/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		7582FA35255C00A400061920 /* Wotakoi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wotakoi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7582FA38255C00A400061920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7582FA3A255C00A400061920 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7582FA3C255C00A400061920 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7582FA3C255C00A400061920 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7582FA41255C00A500061920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7582FA44255C00A500061920 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7582FA46255C00A500061920 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7582FA4C255C013000061920 /* GenericTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericTableViewCell.xib; sourceTree = "<group>"; };
 		7582FA4F255C02EB00061920 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		7582FA50255C02EC00061920 /* SF-Pro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Italic.ttf"; sourceTree = "<group>"; };
 		7582FA77255C043B00061920 /* GenericTableViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewCellController.swift; sourceTree = "<group>"; };
-		7582FA79255C060A00061920 /* AnimeListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeListTableView.swift; sourceTree = "<group>"; };
-		7582FA7B255C064800061920 /* AnimeFavoritesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeFavoritesTableView.swift; sourceTree = "<group>"; };
-		7582FA86255C087A00061920 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		7582FA88255C08B800061920 /* AnimeFavoritesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimeFavoritesView.xib; sourceTree = "<group>"; };
-		7582FA8A255C090900061920 /* AnimeListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimeListView.xib; sourceTree = "<group>"; };
+		7582FA86255C087A00061920 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,9 +85,9 @@
 		7582FA7D255C06F600061920 /* AppStart */ = {
 			isa = PBXGroup;
 			children = (
+				751378C925754AC00024350A /* LaunchScreen.storyboard */,
 				7582FA38255C00A400061920 /* AppDelegate.swift */,
 				7582FA3A255C00A400061920 /* SceneDelegate.swift */,
-				7582FA43255C00A500061920 /* LaunchScreen.storyboard */,
 			);
 			path = AppStart;
 			sourceTree = "<group>";
@@ -152,9 +144,7 @@
 		7582FA84255C075000061920 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				7582FA8E255C092A00061920 /* Favorites */,
 				7582FA8D255C092200061920 /* Home */,
-				7582FA8C255C091700061920 /* List */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -168,31 +158,13 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		7582FA8C255C091700061920 /* List */ = {
-			isa = PBXGroup;
-			children = (
-				7582FA79255C060A00061920 /* AnimeListTableView.swift */,
-				7582FA8A255C090900061920 /* AnimeListView.xib */,
-			);
-			path = List;
-			sourceTree = "<group>";
-		};
 		7582FA8D255C092200061920 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				7582FA86255C087A00061920 /* Main.storyboard */,
-				7582FA3C255C00A400061920 /* ViewController.swift */,
+				7582FA86255C087A00061920 /* Home.storyboard */,
+				7582FA3C255C00A400061920 /* HomeViewController.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		7582FA8E255C092A00061920 /* Favorites */ = {
-			isa = PBXGroup;
-			children = (
-				7582FA7B255C064800061920 /* AnimeFavoritesTableView.swift */,
-				7582FA88255C08B800061920 /* AnimeFavoritesView.xib */,
-			);
-			path = Favorites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,12 +225,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7582FA45255C00A500061920 /* LaunchScreen.storyboard in Resources */,
 				7582FA52255C02EC00061920 /* SF-Pro-Italic.ttf in Resources */,
-				7582FA89255C08B800061920 /* AnimeFavoritesView.xib in Resources */,
-				7582FA8B255C090900061920 /* AnimeListView.xib in Resources */,
+				751378CB25754AC00024350A /* LaunchScreen.storyboard in Resources */,
 				7582FA4D255C013000061920 /* GenericTableViewCell.xib in Resources */,
-				7582FA87255C087A00061920 /* Main.storyboard in Resources */,
+				7582FA87255C087A00061920 /* Home.storyboard in Resources */,
 				7582FA42255C00A500061920 /* Assets.xcassets in Resources */,
 				7582FA51255C02EC00061920 /* SF-Pro.ttf in Resources */,
 			);
@@ -271,22 +241,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7582FA3D255C00A400061920 /* ViewController.swift in Sources */,
+				7582FA3D255C00A400061920 /* HomeViewController.swift in Sources */,
 				7582FA39255C00A400061920 /* AppDelegate.swift in Sources */,
 				7582FA3B255C00A400061920 /* SceneDelegate.swift in Sources */,
-				7582FA7C255C064800061920 /* AnimeFavoritesTableView.swift in Sources */,
 				7582FA78255C043B00061920 /* GenericTableViewCellController.swift in Sources */,
-				7582FA7A255C060A00061920 /* AnimeListTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7582FA43255C00A500061920 /* LaunchScreen.storyboard */ = {
+		751378C925754AC00024350A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7582FA44255C00A500061920 /* Base */,
+				751378CA25754AC00024350A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -413,7 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Wotakoi/Info.plist;
+				INFOPLIST_FILE = Wotakoi/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -430,7 +398,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Wotakoi/Info.plist;
+				INFOPLIST_FILE = Wotakoi/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
