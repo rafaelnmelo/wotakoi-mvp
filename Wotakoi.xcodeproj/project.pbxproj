@@ -17,9 +17,12 @@
 		7582FA52255C02EC00061920 /* SF-Pro-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7582FA50255C02EC00061920 /* SF-Pro-Italic.ttf */; };
 		7582FA78255C043B00061920 /* GenericTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7582FA77255C043B00061920 /* GenericTableViewCellController.swift */; };
 		7582FA87255C087A00061920 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7582FA86255C087A00061920 /* Home.storyboard */; };
+		CBC64CA628DE8DFCD9B148DE /* Pods_Wotakoi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4718065D299CFCC7D917D488 /* Pods_Wotakoi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44E1B8AC1762CC10FDCC43FC /* Pods-Wotakoi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wotakoi.release.xcconfig"; path = "Target Support Files/Pods-Wotakoi/Pods-Wotakoi.release.xcconfig"; sourceTree = "<group>"; };
+		4718065D299CFCC7D917D488 /* Pods_Wotakoi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wotakoi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		751378CA25754AC00024350A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Wotakoi/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		7582FA35255C00A400061920 /* Wotakoi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wotakoi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7582FA38255C00A400061920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 		7582FA50255C02EC00061920 /* SF-Pro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Italic.ttf"; sourceTree = "<group>"; };
 		7582FA77255C043B00061920 /* GenericTableViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewCellController.swift; sourceTree = "<group>"; };
 		7582FA86255C087A00061920 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		92C288097653AE846D41D53F /* Pods-Wotakoi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wotakoi.debug.xcconfig"; path = "Target Support Files/Pods-Wotakoi/Pods-Wotakoi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBC64CA628DE8DFCD9B148DE /* Pods_Wotakoi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		751378CE25755D490024350A /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		7582FA2C255C00A400061920 = {
 			isa = PBXGroup;
 			children = (
 				7582FA37255C00A400061920 /* Wotakoi */,
 				7582FA36255C00A400061920 /* Products */,
+				8DDB371A8FAD4D742AC39246 /* Pods */,
+				C112F024CF8EC2BCE7D0B067 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +78,7 @@
 		7582FA37255C00A400061920 /* Wotakoi */ = {
 			isa = PBXGroup;
 			children = (
+				751378CE25755D490024350A /* New Group */,
 				7582FA7D255C06F600061920 /* AppStart */,
 				7582FA81255C072F00061920 /* Components */,
 				7582FA7F255C071500061920 /* Model */,
@@ -167,6 +182,24 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		8DDB371A8FAD4D742AC39246 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92C288097653AE846D41D53F /* Pods-Wotakoi.debug.xcconfig */,
+				44E1B8AC1762CC10FDCC43FC /* Pods-Wotakoi.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C112F024CF8EC2BCE7D0B067 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4718065D299CFCC7D917D488 /* Pods_Wotakoi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,9 +207,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7582FA49255C00A500061920 /* Build configuration list for PBXNativeTarget "Wotakoi" */;
 			buildPhases = (
+				4E55EFB8F9C9EE58A5C4DACA /* [CP] Check Pods Manifest.lock */,
 				7582FA31255C00A400061920 /* Sources */,
 				7582FA32255C00A400061920 /* Frameworks */,
 				7582FA33255C00A400061920 /* Resources */,
+				C5166A636D7D41B86B4A4856 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,6 +270,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E55EFB8F9C9EE58A5C4DACA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wotakoi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5166A636D7D41B86B4A4856 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wotakoi/Pods-Wotakoi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wotakoi/Pods-Wotakoi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wotakoi/Pods-Wotakoi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7582FA31255C00A400061920 /* Sources */ = {
@@ -378,6 +455,7 @@
 		};
 		7582FA4A255C00A500061920 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92C288097653AE846D41D53F /* Pods-Wotakoi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -395,6 +473,7 @@
 		};
 		7582FA4B255C00A500061920 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44E1B8AC1762CC10FDCC43FC /* Pods-Wotakoi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
