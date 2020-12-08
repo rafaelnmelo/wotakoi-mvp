@@ -4,6 +4,7 @@ struct AnimeModel: Codable {
     let summary: String
     let picture: String
     let airedYear: String
+    let genre: String
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -11,5 +12,6 @@ struct AnimeModel: Codable {
         case summary = "descricao"
         case picture = "fotoDoAnime"
         case airedYear = "anoDoAnime"
+        case genre = "genero"
     }
 }

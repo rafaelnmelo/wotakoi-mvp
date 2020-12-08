@@ -14,10 +14,25 @@
                     <view key="view" contentMode="scaleToFill" id="6TC-ae-Ofu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z5n-C5-Cof">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="92o-rb-Sgi" firstAttribute="trailing" secondItem="Z5n-C5-Cof" secondAttribute="trailing" id="3SR-kW-cEl"/>
+                            <constraint firstItem="Z5n-C5-Cof" firstAttribute="top" secondItem="92o-rb-Sgi" secondAttribute="top" id="Cf1-ke-gej"/>
+                            <constraint firstItem="92o-rb-Sgi" firstAttribute="bottom" secondItem="Z5n-C5-Cof" secondAttribute="bottom" id="MYa-3v-K3c"/>
+                            <constraint firstItem="Z5n-C5-Cof" firstAttribute="leading" secondItem="92o-rb-Sgi" secondAttribute="leading" id="Qle-qg-NdL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="92o-rb-Sgi"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" id="L3a-pa-ysZ"/>
+                    <connections>
+                        <outlet property="tableView" destination="Z5n-C5-Cof" id="kmN-2U-br5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4Y-ln-KnO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -45,6 +60,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="h4g-de-g81" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6vt-St-I78">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

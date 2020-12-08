@@ -14,7 +14,7 @@ final class AnimeListService {
         self.networkManager = networkManager
     }
     
-    func animeModelService(to endpoint: String, callback: @escaping (Result<AnimeModel, ResponseError>) -> Void ) {
+    func animeModelService(to endpoint: String, callback: @escaping (Result<AnimeModel>) -> Void ) {
         
         self.networkManager.getFromServer(by: endpoint) { response in
             switch response.result {

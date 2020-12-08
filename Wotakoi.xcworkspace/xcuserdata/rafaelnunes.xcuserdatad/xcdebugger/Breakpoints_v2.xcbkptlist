@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "BC3B786B-0B9F-4EE4-AFFA-18D5B8214763"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7502C97E-0442-46C9-86CF-6F9EDDEF8D94"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Wotakoi/Components/View/ViewController/Home/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "98EF197A-4676-4457-A86A-06613FC4E140"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Wotakoi/Components/View/ViewController/Home/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "fetchSuccess()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "03AAB64F-294D-4076-8B19-FC609BE57F6F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Wotakoi/Service/AnimeListService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "animeModelService(to:callback:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "03AAB64F-294D-4076-8B19-FC609BE57F6F - fceffcb57954b065"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Wotakoi.AnimeListService.animeModelService(to: Swift.String, callback: (Wotakoi.Result&lt;Wotakoi.AnimeModel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Wotakoi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaelnunes/Documents/iOS-Dev/Wotakoi/Wotakoi/Service/AnimeListService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "03AAB64F-294D-4076-8B19-FC609BE57F6F - ddda0b7c74700a64"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in Wotakoi.AnimeListService.animeModelService(to: Swift.String, callback: (Wotakoi.Result&lt;Wotakoi.AnimeModel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Wotakoi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaelnunes/Documents/iOS-Dev/Wotakoi/Wotakoi/Service/AnimeListService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "279">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
