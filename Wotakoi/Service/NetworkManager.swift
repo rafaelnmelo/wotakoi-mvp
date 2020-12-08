@@ -1,3 +1,4 @@
+import Foundation
 import Alamofire
 /// Todas chamadas de serviço
 protocol NetworkManagerProtocol {

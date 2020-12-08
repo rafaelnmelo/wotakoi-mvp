@@ -21,7 +21,7 @@ class HomePresenter {
         self.homeService.animeModelService(to: Endpoint.fetchAnimeList.rawValue) { response in
             switch response{
             case .success(let animeModel):
-                self.animeMapper(animeData: [animeModel])
+                self.animeMapper(animeData: animeModel)
                 self.delegate?.fetchSuccess()
                 break
             case .failure:
@@ -30,6 +30,7 @@ class HomePresenter {
             
         }
     }
+
 }
 
 //MARK: - ObjectMappers
@@ -49,8 +50,8 @@ extension HomePresenter {
         return animeData.count
     }
     
-    func animeForRow(at indexPath: IndexPath) -> GenericTableViewCellController.Data{
-        let data = GenericTableViewCellController.Data(
+    func animeForRow(at indexPath: IndexPath) -> GenericTableViewCellController.Content{
+        let data = GenericTableViewCellController.Content(
             id: self.animeData[indexPath.row].id,
             name: self.animeData[indexPath.row].name,
             summary: self.animeData[indexPath.row].summary,
