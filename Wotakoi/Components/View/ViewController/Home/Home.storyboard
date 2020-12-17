@@ -34,11 +34,22 @@
                     <tabBarItem key="tabBarItem" title="Home" image="house" id="L3a-pa-ysZ"/>
                     <connections>
                         <outlet property="tableView" destination="Z5n-C5-Cof" id="kmN-2U-br5"/>
+                        <segue destination="BRJ-h6-VVY" kind="show" id="FDb-TR-zbA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4Y-ln-KnO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="280" y="108"/>
+        </scene>
+        <!--DetailViewController-->
+        <scene sceneID="H7B-rC-AwZ">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="DetailViewController" storyboardName="Detail" referencedIdentifier="DetailViewController" id="BRJ-h6-VVY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7HA-3w-CnQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="51y-LM-IFY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="522"/>
         </scene>
         <!--Favoritos-->
         <scene sceneID="zTg-7D-YDt">

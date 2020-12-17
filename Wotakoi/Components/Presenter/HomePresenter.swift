@@ -60,4 +60,14 @@ extension HomePresenter {
         return data
     }
     
+    func animeDetail(at indexPath: IndexPath) -> DetailViewController.Content{
+        let data = DetailViewController.Content(
+            id: self.animeData[indexPath.row].id,
+            name: self.animeData[indexPath.row].name,
+            summary: self.animeData[indexPath.row].summary,
+            picture: self.animeData[indexPath.row].picture,
+            airedYear: self.animeData[indexPath.row].airedYear)
+        return data
+    }
+    
 }

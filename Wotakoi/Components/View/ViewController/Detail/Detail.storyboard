@@ -17,7 +17,7 @@
         <!--Detail View Controller-->
         <scene sceneID="ARz-j9-BRZ">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aer-Zc-71K" customClass="DetailViewController" customModule="Wotakoi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aer-Zc-71K" customClass="DetailViewController" customModule="Wotakoi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gzj-JJ-GB8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,8 +34,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anime Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ML7-X6-ZHA">
-                                <rect key="frame" x="20" y="302" width="144.5" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anime Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ML7-X6-ZHA">
+                                <rect key="frame" x="20" y="302" width="336" height="36"/>
                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -52,8 +52,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2H-LT-257">
-                                <rect key="frame" x="20" y="410" width="84" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2H-LT-257">
+                                <rect key="frame" x="20" y="410" width="374" height="263"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -78,17 +79,26 @@
                             <constraint firstItem="YW9-1b-fpL" firstAttribute="leading" secondItem="DXy-cr-hPr" secondAttribute="leading" constant="20" id="NTe-XR-3Zw"/>
                             <constraint firstItem="DXy-cr-hPr" firstAttribute="bottom" secondItem="iAg-HI-ptO" secondAttribute="bottom" constant="20" id="Ne4-CX-teH"/>
                             <constraint firstItem="Q2H-LT-257" firstAttribute="leading" secondItem="YW9-1b-fpL" secondAttribute="leading" id="PbD-PF-KI9"/>
-                            <constraint firstItem="r4h-5j-4IA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ML7-X6-ZHA" secondAttribute="trailing" constant="8" id="TW4-qa-k0u"/>
+                            <constraint firstItem="r4h-5j-4IA" firstAttribute="leading" secondItem="ML7-X6-ZHA" secondAttribute="trailing" constant="8" id="TW4-qa-k0u"/>
                             <constraint firstItem="Q2H-LT-257" firstAttribute="top" secondItem="dqa-fC-VEH" secondAttribute="bottom" constant="8" id="dhF-MH-tCY"/>
                             <constraint firstItem="dqa-fC-VEH" firstAttribute="leading" secondItem="YW9-1b-fpL" secondAttribute="leading" id="gRR-yY-9ID"/>
                             <constraint firstItem="ML7-X6-ZHA" firstAttribute="leading" secondItem="YW9-1b-fpL" secondAttribute="leading" id="jrV-jc-2xl"/>
                             <constraint firstItem="DXy-cr-hPr" firstAttribute="trailing" secondItem="YW9-1b-fpL" secondAttribute="trailing" constant="20" id="knT-4F-EvO"/>
+                            <constraint firstItem="Q2H-LT-257" firstAttribute="trailing" secondItem="YW9-1b-fpL" secondAttribute="trailing" id="xA3-Uo-3gH"/>
                             <constraint firstItem="WkV-aQ-rQT" firstAttribute="top" secondItem="ML7-X6-ZHA" secondAttribute="bottom" constant="8" id="ywb-oc-ved"/>
                             <constraint firstItem="iAg-HI-ptO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Q2H-LT-257" secondAttribute="bottom" constant="8" id="z6D-kt-8S4"/>
                             <constraint firstItem="dqa-fC-VEH" firstAttribute="top" secondItem="WkV-aQ-rQT" secondAttribute="bottom" constant="8" id="z7R-Oj-uhn"/>
                             <constraint firstItem="DXy-cr-hPr" firstAttribute="trailing" secondItem="iAg-HI-ptO" secondAttribute="trailing" constant="20" id="zy0-bT-CcP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animeAiredYear" destination="dqa-fC-VEH" id="x1P-XK-ps8"/>
+                        <outlet property="animeGenre" destination="WkV-aQ-rQT" id="Axk-Kq-YTf"/>
+                        <outlet property="animeID" destination="iAg-HI-ptO" id="we8-La-9Og"/>
+                        <outlet property="animeImg" destination="YW9-1b-fpL" id="y5N-5Z-9Qd"/>
+                        <outlet property="animeSummary" destination="Q2H-LT-257" id="93l-i2-Exh"/>
+                        <outlet property="animeTitle" destination="ML7-X6-ZHA" id="vBv-rh-Zhz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ij-YO-yef" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

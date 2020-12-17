@@ -57,7 +57,13 @@ extension HomeViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        MARK: - TODO
+        if let detailVC = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(identifier: "DetailViewController") as? DetailViewController {
+            if let data = presenter?.animeDetail(at: indexPath) {
+                detailVC.data = data
+                present(detailVC, animated: true, completion: nil)
+            }
+            
+        }
     }
 }
 

@@ -55,11 +55,8 @@ extension GenericTableViewCellController {
     }
     
     func downloadImage(from url: URL) {
-        print("Download Started")
         getImageData(from: url) { data, response, error in
             guard let data = data, error == nil else { return }
-            print(response?.suggestedFilename ?? url.lastPathComponent)
-            print("Download Finished")
             DispatchQueue.main.async() { [weak self] in
                 self?.animeImg.image = UIImage(data: data)
             }
