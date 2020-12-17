@@ -8,6 +8,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var animeAiredYear: UILabel!
     @IBOutlet weak var animeSummary: UILabel!
     @IBOutlet weak var animeID: UILabel!
+    @IBOutlet weak var favoriteImg: UIButton!
     
     var data = Content()
     
@@ -15,7 +16,19 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         self.build(data: data)
     }
+    @IBAction func returnToList(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
+    @IBAction func favor(_ sender: Any) {
+        if favoriteImg.isSelected {
+            favoriteImg.isSelected = false
+//            MARK: - TODO Remove from favorites list
+        } else {
+            favoriteImg.isSelected = true
+//            MARK: - TODO ADD to favorites list
+        }
+    }
 }
 
 extension DetailViewController {
@@ -34,8 +47,8 @@ extension DetailViewController {
             self.downloadImage(from: URL(string: url) ?? baseURL)
         }
         self.animeTitle.text = data.name ?? ""
-        self.animeGenre.text = data.genre ?? ""
-        self.animeAiredYear.text = data.airedYear ?? ""
+        self.animeGenre.text = "Gênero: \(data.genre ?? "")"
+        self.animeAiredYear.text = "Estréia: \(data.id ?? "")"
         self.animeSummary.text = data.summary ?? ""
         self.animeID.text = "Código de referência: \(data.id ?? "")"
         

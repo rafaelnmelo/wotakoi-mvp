@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Lista de Animes-->
         <scene sceneID="nKp-f7-Kcy">
             <objects>
                 <viewController id="sZV-sN-Zg0" customClass="HomeViewController" customModule="Wotakoi" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,7 +31,7 @@
                             <constraint firstItem="Z5n-C5-Cof" firstAttribute="leading" secondItem="92o-rb-Sgi" secondAttribute="leading" id="Qle-qg-NdL"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house" id="L3a-pa-ysZ"/>
+                    <tabBarItem key="tabBarItem" title="Lista de Animes" image="house" id="L3a-pa-ysZ"/>
                     <connections>
                         <outlet property="tableView" destination="Z5n-C5-Cof" id="kmN-2U-br5"/>
                         <segue destination="BRJ-h6-VVY" kind="show" id="FDb-TR-zbA"/>
@@ -51,7 +51,7 @@
             </objects>
             <point key="canvasLocation" x="280" y="522"/>
         </scene>
-        <!--Favoritos-->
+        <!--Meus Favoritos-->
         <scene sceneID="zTg-7D-YDt">
             <objects>
                 <viewController id="elE-ee-8zp" sceneMemberID="viewController">
@@ -61,7 +61,7 @@
                         <viewLayoutGuide key="safeArea" id="gQe-uz-zn6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favoritos" image="star" id="d6P-c5-gK3"/>
+                    <tabBarItem key="tabBarItem" title="Meus Favoritos" image="star" id="d6P-c5-gK3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFi-k0-SuR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
