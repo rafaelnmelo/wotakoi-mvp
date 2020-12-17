@@ -48,7 +48,7 @@ extension DetailViewController {
         }
         self.animeTitle.text = data.name ?? ""
         self.animeGenre.text = "Gênero: \(data.genre ?? "")"
-        self.animeAiredYear.text = "Estréia: \(data.id ?? "")"
+        self.animeAiredYear.text = "Estréia: \(data.airedYear ?? "")"
         self.animeSummary.text = data.summary ?? ""
         self.animeID.text = "Código de referência: \(data.id ?? "")"
         
