@@ -11,22 +11,27 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var favoriteImg: UIButton!
     
     var data = Content()
+    var favorite = [String:Dictionary<String, String>]()
+    var list = WotakoiConstants.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.build(data: data)
     }
+    
     @IBAction func returnToList(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func favor(_ sender: Any) {
+        self.buildFav(data: data)
         if favoriteImg.isSelected {
             favoriteImg.isSelected = false
-//            MARK: - TODO Remove from favorites list
+            list.removeFromFav(favorite)
         } else {
             favoriteImg.isSelected = true
-//            MARK: - TODO ADD to favorites list
+            self.buildFav(data: data)
+            list.addToFav(favorite)
         }
     }
 }
@@ -52,6 +57,17 @@ extension DetailViewController {
         self.animeSummary.text = data.summary ?? ""
         self.animeID.text = "Código de referência: \(data.id ?? "")"
         
+    }
+    
+    func buildFav(data: Content) {
+        var content = [String:String]()
+        content = ["id":data.id ?? ""]
+        content = ["name":data.name ?? ""]
+        content = ["summary":data.summary ?? ""]
+        content = ["picture":data.picture ?? ""]
+        content = ["airedYear":data.airedYear ?? ""]
+        content = ["genre":data.genre ?? ""]
+        self.favorite = [data.id ?? "":content]
     }
 }
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2DC5224B258B96B100958D97 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5224A258B96B100958D97 /* DetailViewController.swift */; };
 		2DC52253258B96E900958D97 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DC52252258B96E900958D97 /* Detail.storyboard */; };
+		2DD3190D258CE28700881208 /* WotakoiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3190C258CE28700881208 /* WotakoiConstants.swift */; };
 		750C9139257FEE7A00CD5230 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750C9138257FEE7A00CD5230 /* HomePresenter.swift */; };
 		750C913B257FEF9700CD5230 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750C913A257FEF9700CD5230 /* Endpoint.swift */; };
 		750C913F257FFC3400CD5230 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750C913E257FFC3400CD5230 /* Response.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		2DC5224A258B96B100958D97 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2DC52252258B96E900958D97 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		2DD3190C258CE28700881208 /* WotakoiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WotakoiConstants.swift; sourceTree = "<group>"; };
 		44E1B8AC1762CC10FDCC43FC /* Pods-Wotakoi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wotakoi.release.xcconfig"; path = "Target Support Files/Pods-Wotakoi/Pods-Wotakoi.release.xcconfig"; sourceTree = "<group>"; };
 		4718065D299CFCC7D917D488 /* Pods_Wotakoi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wotakoi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		750C9138257FEE7A00CD5230 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				750C9138257FEE7A00CD5230 /* HomePresenter.swift */,
 				750C913A257FEF9700CD5230 /* Endpoint.swift */,
 				750C913E257FFC3400CD5230 /* Response.swift */,
+				2DD3190C258CE28700881208 /* WotakoiConstants.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				75B8F8E72577D86C00A12672 /* AnimeListService.swift in Sources */,
 				7582FA3D255C00A400061920 /* HomeViewController.swift in Sources */,
 				75B8F8E92577D91600A12672 /* AnimeModel.swift in Sources */,
+				2DD3190D258CE28700881208 /* WotakoiConstants.swift in Sources */,
 				750C913B257FEF9700CD5230 /* Endpoint.swift in Sources */,
 				750C913F257FFC3400CD5230 /* Response.swift in Sources */,
 				7582FA39255C00A400061920 /* AppDelegate.swift in Sources */,
