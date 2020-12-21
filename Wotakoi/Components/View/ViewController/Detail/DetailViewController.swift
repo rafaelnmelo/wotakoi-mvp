@@ -61,13 +61,13 @@ extension DetailViewController {
     
     func buildFav(data: Content) {
         var content = [String:String]()
-        content = ["id":data.id ?? ""]
-        content = ["name":data.name ?? ""]
-        content = ["summary":data.summary ?? ""]
-        content = ["picture":data.picture ?? ""]
-        content = ["airedYear":data.airedYear ?? ""]
-        content = ["genre":data.genre ?? ""]
-        self.favorite = [data.id ?? "":content]
+        content["id"] = data.id ?? ""
+        content["name"] = data.name ?? ""
+        content["summary"] = data.summary ?? ""
+        content["picture"] = data.picture ?? ""
+        content["airedYear"] = data.airedYear ?? ""
+        content["genre"] = data.genre ?? ""
+        self.favorite[data.id ?? ""] = content
     }
 }
 
