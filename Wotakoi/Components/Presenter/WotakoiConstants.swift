@@ -11,7 +11,11 @@ class WotakoiConstants {
     var favoritesList = [String:Dictionary<String, String>]()
 
     func addToFav(_ anime: [String:Dictionary<String, String>]) {
-        favoritesList = anime
+        favoritesList = userDefaults.object(forKey: "favoritesList") as? [String:Dictionary<String, String>] ?? [:]
+        for item in anime {
+            favoritesList["\(item.key)"] = item.value
+        }
+        
         userDefaults.set(favoritesList, forKey: UserDefaultsKeys.favoritesList.rawValue)
     }
     

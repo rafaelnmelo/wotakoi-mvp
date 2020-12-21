@@ -3,17 +3,12 @@ import UIKit
 class FavoritesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
-    var userDefaults = UserDefaults.standard
-    var favoritesList = [String:Dictionary<String, String>]()
+    private var presenter: HomePresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.setupFavorites()
+        setupPresenter()
     }
     
     private func setupTableView() {
@@ -22,7 +17,9 @@ class FavoritesViewController: UIViewController {
         tableView.dataSource = self
     }
     
-    private func setupFavorites() {
+    private func setupPresenter() {
+        presenter = HomePresenter()
+        presenter?.delegate = self
     }
 }
 
@@ -34,21 +31,22 @@ extension FavoritesViewController: UITableViewDelegate {
 
 extension FavoritesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 5
+        return self.presenter?.favoritesRows() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "GenericTableViewCell", for: indexPath) as? GenericTableViewCellController {
-//            let data = GenericTableViewCellController.Content(
-//                id: self.animeData[indexPath.row].id,
-//                name: self.animeData[indexPath.row].name,
-//                summary: self.animeData[indexPath.row].summary,
-//                picture: self.animeData[indexPath.row].picture,
-//                airedYear: self.animeData[indexPath.row].airedYear)
+            if let data = presenter?.favoriteForRow(at: indexPath) {
+                cell.build(data: data)
+                return cell
+            }
         }
         return UITableViewCell()
     }
-    
-    
+}
+
+extension FavoritesViewController: HomePresenterDelegate {
+    func fetchSuccess() {
+        tableView.reloadData() /// Realimentar a tableview com todos seus métodos
+    }
 }
