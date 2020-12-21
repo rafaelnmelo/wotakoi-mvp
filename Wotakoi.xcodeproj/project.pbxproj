@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D62776D2590DDBB00F0F0C0 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D62776C2590DDBB00F0F0C0 /* FavoritesViewController.swift */; };
 		2DC5224B258B96B100958D97 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5224A258B96B100958D97 /* DetailViewController.swift */; };
 		2DC52253258B96E900958D97 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DC52252258B96E900958D97 /* Detail.storyboard */; };
 		2DD3190D258CE28700881208 /* WotakoiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3190C258CE28700881208 /* WotakoiConstants.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D62776C2590DDBB00F0F0C0 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		2DC5224A258B96B100958D97 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2DC52252258B96E900958D97 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		2DD3190C258CE28700881208 /* WotakoiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WotakoiConstants.swift; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D62776B2590DDA700F0F0C0 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				2D62776C2590DDBB00F0F0C0 /* FavoritesViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
 		2DC52249258B969000958D97 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,7 +195,9 @@
 		7582FA84255C075000061920 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7582FA86255C087A00061920 /* Home.storyboard */,
 				7582FA8D255C092200061920 /* Home */,
+				2D62776B2590DDA700F0F0C0 /* Favorites */,
 				2DC52249258B969000958D97 /* Detail */,
 			);
 			path = ViewController;
@@ -203,7 +215,6 @@
 		7582FA8D255C092200061920 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				7582FA86255C087A00061920 /* Home.storyboard */,
 				7582FA3C255C00A400061920 /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -345,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D62776D2590DDBB00F0F0C0 /* FavoritesViewController.swift in Sources */,
 				2DC5224B258B96B100958D97 /* DetailViewController.swift in Sources */,
 				75B8F8E72577D86C00A12672 /* AnimeListService.swift in Sources */,
 				7582FA3D255C00A400061920 /* HomeViewController.swift in Sources */,

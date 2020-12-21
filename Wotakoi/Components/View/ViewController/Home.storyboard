@@ -54,14 +54,29 @@
         <!--Meus Favoritos-->
         <scene sceneID="zTg-7D-YDt">
             <objects>
-                <viewController id="elE-ee-8zp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoritesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="elE-ee-8zp" customClass="FavoritesViewController" customModule="Wotakoi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rht-c3-QdI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PN0-8y-gIH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gQe-uz-zn6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PN0-8y-gIH" firstAttribute="top" secondItem="gQe-uz-zn6" secondAttribute="top" id="JZy-g5-SNW"/>
+                            <constraint firstItem="gQe-uz-zn6" firstAttribute="trailing" secondItem="PN0-8y-gIH" secondAttribute="trailing" id="iV3-cT-Mrl"/>
+                            <constraint firstItem="PN0-8y-gIH" firstAttribute="leading" secondItem="gQe-uz-zn6" secondAttribute="leading" id="ien-NS-wu9"/>
+                            <constraint firstItem="gQe-uz-zn6" firstAttribute="bottom" secondItem="PN0-8y-gIH" secondAttribute="bottom" id="j4d-2e-Ab2"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Meus Favoritos" image="star" id="d6P-c5-gK3"/>
+                    <connections>
+                        <outlet property="tableView" destination="PN0-8y-gIH" id="H7I-k9-DCb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFi-k0-SuR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
