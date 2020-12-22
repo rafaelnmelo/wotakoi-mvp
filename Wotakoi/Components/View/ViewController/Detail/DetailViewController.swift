@@ -47,6 +47,8 @@ extension DetailViewController {
     }
     
     func build(data: Content) {
+        self.checkFav(data: data)
+        
         if let url = data.picture {
             guard let baseURL = URL(string: "https://i.stack.imgur.com/y9DpT.jpg") else {return}
             self.downloadImage(from: URL(string: url) ?? baseURL)
@@ -57,6 +59,19 @@ extension DetailViewController {
         self.animeSummary.text = data.summary ?? ""
         self.animeID.text = "Código de referência: \(data.id ?? "")"
         
+    }
+    
+    func checkFav(data: Content) {
+        let userDefaults = UserDefaults.standard
+        let favoritesList = userDefaults.object(forKey: "favoritesList") as? [String:Dictionary<String, String>] ?? [:]
+        
+        for item in favoritesList {
+            for subItem in item.value {
+                if subItem.value == data.id {
+                    favoriteImg.isSelected = true
+                }
+            }
+        }
     }
     
     func buildFav(data: Content) {
