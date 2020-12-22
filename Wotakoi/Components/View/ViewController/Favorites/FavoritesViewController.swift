@@ -40,10 +40,8 @@ extension FavoritesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "GenericTableViewCell", for: indexPath) as? GenericTableViewCellController {
-            if let data = presenter?.favoriteForRow() {
-                for anime in data {
-                    cell.build(data: anime)
-                }
+            if let data = presenter?.favoriteForRow(at: indexPath) {
+                cell.build(data: data)
                 return cell
             }
         }

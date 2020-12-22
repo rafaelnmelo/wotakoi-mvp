@@ -114,8 +114,9 @@ extension HomePresenter {
         return self.favoriteMapper().count
     }
     
-    func favoriteForRow() -> [GenericTableViewCellController.Content]{
-        return self.favoriteMapper()
+    func favoriteForRow(at indexPath: IndexPath) -> GenericTableViewCellController.Content{
+        let array = self.favoriteMapper()
+        return array[indexPath.row]
     }
     
 }
