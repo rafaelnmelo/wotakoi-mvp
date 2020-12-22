@@ -11,6 +11,10 @@ class FavoritesViewController: UIViewController {
         setupPresenter()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     private func setupTableView() {
         tableView.register(UINib(nibName: "GenericTableViewCell", bundle: nil), forCellReuseIdentifier: "GenericTableViewCell")
         tableView.delegate = self
@@ -36,8 +40,10 @@ extension FavoritesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "GenericTableViewCell", for: indexPath) as? GenericTableViewCellController {
-            if let data = presenter?.favoriteForRow(at: indexPath) {
-                cell.build(data: data)
+            if let data = presenter?.favoriteForRow() {
+                for anime in data {
+                    cell.build(data: anime)
+                }
                 return cell
             }
         }

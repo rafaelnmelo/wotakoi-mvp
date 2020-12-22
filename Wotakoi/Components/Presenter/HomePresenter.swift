@@ -42,18 +42,42 @@ extension HomePresenter {
         self.animeData = animeData
     }
     
-    func favoriteMapper() {
-//        let data = userDefaults.object(forKey: "favoritesList") as? [String:Dictionary<String, String>] ?? [:]
-//
-//        self.animeData = data
-//
-//        for item in animeData {
-//            for subItem in item.value {
-//                self.animeData = subItem as AnimeModel
-//                self.favoritesList[subItem.key] = subItem.value
-//            }
-//
-//        }
+    func favoriteMapper() -> [GenericTableViewCellController.Content] {
+        let data = userDefaults.object(forKey: "favoritesList") as? [String:Dictionary<String, String>] ?? [:]
+        
+        var anime = [String:String]()
+        var content = [GenericTableViewCellController.Content]()
+        
+        for item in data {
+            for subItem in item.value {
+                switch subItem.key {
+                case "id":
+                    anime["id"] = subItem.value
+                case "name":
+                    anime["name"] = subItem.value
+                case "summary":
+                    anime["summary"] = subItem.value
+                case "picture":
+                    anime["picture"] = subItem.value
+                case "airedYear":
+                    anime["airedYear"] = subItem.value
+                default:
+                    anime["genre"] = subItem.value
+                }
+            }
+                
+                
+                let favorites = GenericTableViewCellController.Content(
+                    id: anime["id"] ?? "",
+                    name: anime["name"] ?? "",
+                    summary: anime["summary"] ?? "",
+                    picture: anime["picture"] ?? "",
+                    airedYear: anime["airedYear"] ?? "",
+                    genre: anime["genre"] ?? "")
+                
+                content.append(favorites)
+        }
+        return content
     }
     
 }
@@ -87,23 +111,11 @@ extension HomePresenter {
     }
     
     func favoritesRows() -> Int{
-        return favoritesList.count
+        return self.favoriteMapper().count
     }
     
-    func favoriteForRow(at indexPath: IndexPath) -> GenericTableViewCellController.Content{
-//        self.favoriteMapper()
-//        
-//        for dados in favoritesList {
-//            let data = GenericTableViewCellController.Content(
-//                id: dados[indexPath.row].id,
-//                name: dados["name"],
-//                summary: dados["summary"],
-//                picture: dados["picture"],
-//                airedYear: dados["airedYear"])
-//            return data
-//        }
-        return GenericTableViewCellController.Content()
-
+    func favoriteForRow() -> [GenericTableViewCellController.Content]{
+        return self.favoriteMapper()
     }
     
 }
