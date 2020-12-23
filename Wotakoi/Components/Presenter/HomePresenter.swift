@@ -66,18 +66,17 @@ extension HomePresenter {
                 }
             }
                 
-                
-                let favorites = GenericTableViewCellController.Content(
-                    id: anime["id"] ?? "",
-                    name: anime["name"] ?? "",
-                    summary: anime["summary"] ?? "",
-                    picture: anime["picture"] ?? "",
-                    airedYear: anime["airedYear"] ?? "",
-                    genre: anime["genre"] ?? "")
-                
-                content.append(favorites)
+            let favorites = GenericTableViewCellController.Content(
+                id: anime["id"] ?? "",
+                name: anime["name"] ?? "",
+                summary: anime["summary"] ?? "",
+                picture: anime["picture"] ?? "",
+                airedYear: anime["airedYear"] ?? "",
+                genre: anime["genre"] ?? "")
+            
+            content.append(favorites)
         }
-        return content
+        return content.sorted(by: { $0.id ?? "" > $1.id ?? ""})
     }
     
 }
