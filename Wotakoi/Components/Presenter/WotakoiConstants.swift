@@ -20,7 +20,9 @@ class WotakoiConstants {
     }
     
     func removeFromFav(_ anime: [String:Dictionary<String, String>]) {
+        favoritesList = userDefaults.object(forKey: "favoritesList") as? [String:Dictionary<String, String>] ?? [:]
         guard let id = anime.first?.key else {return}
-        userDefaults.removeObject(forKey: id)
+        favoritesList.removeValue(forKey: id)
+        userDefaults.set(favoritesList, forKey: UserDefaultsKeys.favoritesList.rawValue)
     }
 }
