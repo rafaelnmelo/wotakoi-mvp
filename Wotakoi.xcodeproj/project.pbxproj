@@ -23,6 +23,7 @@
 		75B8F8E52577D84E00A12672 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B8F8E42577D84E00A12672 /* NetworkManager.swift */; };
 		75B8F8E72577D86C00A12672 /* AnimeListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B8F8E62577D86C00A12672 /* AnimeListService.swift */; };
 		75B8F8E92577D91600A12672 /* AnimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B8F8E82577D91600A12672 /* AnimeModel.swift */; };
+		8DADAF8D29E44D4700E48BAA /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DADAF8C29E44D4700E48BAA /* UIImage+Extension.swift */; };
 		CBC64CA628DE8DFCD9B148DE /* Pods_Wotakoi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4718065D299CFCC7D917D488 /* Pods_Wotakoi.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		75B8F8E42577D84E00A12672 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		75B8F8E62577D86C00A12672 /* AnimeListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeListService.swift; sourceTree = "<group>"; };
 		75B8F8E82577D91600A12672 /* AnimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeModel.swift; sourceTree = "<group>"; };
+		8DADAF8C29E44D4700E48BAA /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		92C288097653AE846D41D53F /* Pods-Wotakoi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wotakoi.debug.xcconfig"; path = "Target Support Files/Pods-Wotakoi/Pods-Wotakoi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 			children = (
 				7582FA7D255C06F600061920 /* AppStart */,
 				7582FA81255C072F00061920 /* Components */,
+				8DADAF8B29E44D2900E48BAA /* Extensions */,
 				7582FA7E255C070900061920 /* Resources */,
 				7582FA80255C072600061920 /* Service */,
 				8DADAF8729E44CA200E48BAA /* SupportingFiles */,
@@ -206,6 +209,14 @@
 				7582FA3C255C00A400061920 /* HomeViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8DADAF8B29E44D2900E48BAA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8DADAF8C29E44D4700E48BAA /* UIImage+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		8DDB371A8FAD4D742AC39246 /* Pods */ = {
@@ -352,6 +363,7 @@
 				75B8F8E52577D84E00A12672 /* NetworkManager.swift in Sources */,
 				7582FA3B255C00A400061920 /* SceneDelegate.swift in Sources */,
 				7582FA78255C043B00061920 /* GenericTableViewCellController.swift in Sources */,
+				8DADAF8D29E44D4700E48BAA /* UIImage+Extension.swift in Sources */,
 				750C9139257FEE7A00CD5230 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
