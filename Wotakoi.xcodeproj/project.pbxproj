@@ -23,9 +23,20 @@
 		75B8F8E52577D84E00A12672 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B8F8E42577D84E00A12672 /* NetworkManager.swift */; };
 		75B8F8E72577D86C00A12672 /* AnimeListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B8F8E62577D86C00A12672 /* AnimeListService.swift */; };
 		75B8F8E92577D91600A12672 /* AnimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B8F8E82577D91600A12672 /* AnimeModel.swift */; };
+		8D328A1B29E481C8004E0851 /* WotakoiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D328A1A29E481C8004E0851 /* WotakoiTests.swift */; };
 		8DADAF8D29E44D4700E48BAA /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DADAF8C29E44D4700E48BAA /* UIImage+Extension.swift */; };
 		CBC64CA628DE8DFCD9B148DE /* Pods_Wotakoi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4718065D299CFCC7D917D488 /* Pods_Wotakoi.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8D328A1C29E481C8004E0851 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7582FA2D255C00A400061920 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7582FA34255C00A400061920;
+			remoteInfo = Wotakoi;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		44E1B8AC1762CC10FDCC43FC /* Pods-Wotakoi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wotakoi.release.xcconfig"; path = "Target Support Files/Pods-Wotakoi/Pods-Wotakoi.release.xcconfig"; sourceTree = "<group>"; };
@@ -48,6 +59,8 @@
 		75B8F8E42577D84E00A12672 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		75B8F8E62577D86C00A12672 /* AnimeListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeListService.swift; sourceTree = "<group>"; };
 		75B8F8E82577D91600A12672 /* AnimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeModel.swift; sourceTree = "<group>"; };
+		8D328A1829E481C8004E0851 /* WotakoiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WotakoiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D328A1A29E481C8004E0851 /* WotakoiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WotakoiTests.swift; sourceTree = "<group>"; };
 		8DADAF8C29E44D4700E48BAA /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		92C288097653AE846D41D53F /* Pods-Wotakoi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wotakoi.debug.xcconfig"; path = "Target Support Files/Pods-Wotakoi/Pods-Wotakoi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +74,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8D328A1529E481C8004E0851 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -68,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				7582FA37255C00A400061920 /* Wotakoi */,
+				8D328A1929E481C8004E0851 /* WotakoiTests */,
 				7582FA36255C00A400061920 /* Products */,
 				8DDB371A8FAD4D742AC39246 /* Pods */,
 				C112F024CF8EC2BCE7D0B067 /* Frameworks */,
@@ -78,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				7582FA35255C00A400061920 /* Wotakoi.app */,
+				8D328A1829E481C8004E0851 /* WotakoiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,6 +192,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		8D328A1929E481C8004E0851 /* WotakoiTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D328A1A29E481C8004E0851 /* WotakoiTests.swift */,
+			);
+			path = WotakoiTests;
+			sourceTree = "<group>";
+		};
 		8DADAF8629E447B900E48BAA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,18 +288,40 @@
 			productReference = 7582FA35255C00A400061920 /* Wotakoi.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8D328A1729E481C8004E0851 /* WotakoiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D328A2029E481C8004E0851 /* Build configuration list for PBXNativeTarget "WotakoiTests" */;
+			buildPhases = (
+				8D328A1429E481C8004E0851 /* Sources */,
+				8D328A1529E481C8004E0851 /* Frameworks */,
+				8D328A1629E481C8004E0851 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D328A1D29E481C8004E0851 /* PBXTargetDependency */,
+			);
+			name = WotakoiTests;
+			productName = WotakoiTests;
+			productReference = 8D328A1829E481C8004E0851 /* WotakoiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		7582FA2D255C00A400061920 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				ORGANIZATIONNAME = "Rafael Nunes";
 				TargetAttributes = {
 					7582FA34255C00A400061920 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					8D328A1729E481C8004E0851 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 7582FA34255C00A400061920;
 					};
 				};
 			};
@@ -287,6 +339,7 @@
 			projectRoot = "";
 			targets = (
 				7582FA34255C00A400061920 /* Wotakoi */,
+				8D328A1729E481C8004E0851 /* WotakoiTests */,
 			);
 		};
 /* End PBXProject section */
@@ -302,6 +355,13 @@
 				7582FA87255C087A00061920 /* Home.storyboard in Resources */,
 				7582FA42255C00A500061920 /* Assets.xcassets in Resources */,
 				7582FA51255C02EC00061920 /* SF-Pro.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D328A1629E481C8004E0851 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +428,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8D328A1429E481C8004E0851 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D328A1B29E481C8004E0851 /* WotakoiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8D328A1D29E481C8004E0851 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7582FA34255C00A400061920 /* Wotakoi */;
+			targetProxy = 8D328A1C29E481C8004E0851 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		751378C925754AC00024350A /* LaunchScreen.storyboard */ = {
@@ -534,6 +610,46 @@
 			};
 			name = Release;
 		};
+		8D328A1E29E481C8004E0851 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TGBHB6DPPU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rafaelnunes.WotakoiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wotakoi.app/Wotakoi";
+			};
+			name = Debug;
+		};
+		8D328A1F29E481C8004E0851 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TGBHB6DPPU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rafaelnunes.WotakoiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wotakoi.app/Wotakoi";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -551,6 +667,15 @@
 			buildConfigurations = (
 				7582FA4A255C00A500061920 /* Debug */,
 				7582FA4B255C00A500061920 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D328A2029E481C8004E0851 /* Build configuration list for PBXNativeTarget "WotakoiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D328A1E29E481C8004E0851 /* Debug */,
+				8D328A1F29E481C8004E0851 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
