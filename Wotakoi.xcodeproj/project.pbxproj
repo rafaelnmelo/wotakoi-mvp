@@ -85,9 +85,10 @@
 			children = (
 				7582FA7D255C06F600061920 /* AppStart */,
 				7582FA81255C072F00061920 /* Components */,
-				7582FA7F255C071500061920 /* Model */,
 				7582FA7E255C070900061920 /* Resources */,
 				7582FA80255C072600061920 /* Service */,
+				8DADAF8729E44CA200E48BAA /* SupportingFiles */,
+				8DADAF8629E447B900E48BAA /* Utils */,
 			);
 			path = Wotakoi;
 			sourceTree = "<group>";
@@ -114,19 +115,19 @@
 		7582FA7E255C070900061920 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7582FA46255C00A500061920 /* Info.plist */,
 				7582FA4E255C02DB00061920 /* Fonts */,
 				7582FA41255C00A500061920 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		7582FA7F255C071500061920 /* Model */ = {
+		7582FA7F255C071500061920 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				75B8F8E82577D91600A12672 /* AnimeModel.swift */,
+				750C913E257FFC3400CD5230 /* Response.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		7582FA80255C072600061920 /* Service */ = {
@@ -141,55 +142,70 @@
 		7582FA81255C072F00061920 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				7582FA83255C074200061920 /* View */,
-				7582FA82255C073900061920 /* Presenter */,
+				8DADAF8829E44CC400E48BAA /* Commons */,
+				7582FA85255C075A00061920 /* GenericCell */,
+				7582FA8D255C092200061920 /* Home */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		7582FA82255C073900061920 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				750C9138257FEE7A00CD5230 /* HomePresenter.swift */,
-				750C913A257FEF9700CD5230 /* Endpoint.swift */,
-				750C913E257FFC3400CD5230 /* Response.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		7582FA83255C074200061920 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				7582FA85255C075A00061920 /* Cell */,
-				7582FA84255C075000061920 /* ViewController */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		7582FA84255C075000061920 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				7582FA8D255C092200061920 /* Home */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		7582FA85255C075A00061920 /* Cell */ = {
+		7582FA85255C075A00061920 /* GenericCell */ = {
 			isa = PBXGroup;
 			children = (
 				7582FA4C255C013000061920 /* GenericTableViewCell.xib */,
 				7582FA77255C043B00061920 /* GenericTableViewCellController.swift */,
 			);
-			path = Cell;
+			path = GenericCell;
 			sourceTree = "<group>";
 		};
 		7582FA8D255C092200061920 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8DADAF8A29E44CE800E48BAA /* View */,
+				8DADAF8929E44CDD00E48BAA /* Presenter */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8DADAF8629E447B900E48BAA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				750C913A257FEF9700CD5230 /* Endpoint.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8DADAF8729E44CA200E48BAA /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7582FA46255C00A500061920 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		8DADAF8829E44CC400E48BAA /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				7582FA7F255C071500061920 /* Models */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		8DADAF8929E44CDD00E48BAA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				750C9138257FEE7A00CD5230 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8DADAF8A29E44CE800E48BAA /* View */ = {
+			isa = PBXGroup;
+			children = (
 				7582FA86255C087A00061920 /* Home.storyboard */,
 				7582FA3C255C00A400061920 /* HomeViewController.swift */,
 			);
-			path = Home;
+			path = View;
 			sourceTree = "<group>";
 		};
 		8DDB371A8FAD4D742AC39246 /* Pods */ = {
