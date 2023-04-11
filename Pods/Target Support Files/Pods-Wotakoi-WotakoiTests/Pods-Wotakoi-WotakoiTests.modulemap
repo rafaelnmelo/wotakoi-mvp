@@ -1,0 +1,6 @@
+framework module Pods_Wotakoi_WotakoiTests {
+  umbrella header "Pods-Wotakoi-WotakoiTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
