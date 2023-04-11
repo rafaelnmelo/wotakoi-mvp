@@ -22,7 +22,7 @@ class StringUtilsSpec: XCTestCase {
         let text = "Menino"
         let genderSwap = text.replace(string: "o", replacement: "a")
         
-        XCTAssertTrue(genderSwap == "Menine", "\n\nTroca não realizada\n\n")
+        XCTAssertTrue(genderSwap == "Menina", "\n\nTroca não realizada\n\n")
     }
 
 }
