@@ -1,7 +1,11 @@
 import UIKit
 /// Herdar de AnyObject fará com que apenas classes possam ser criadas conforme este protocolo. Obs.: class está deprecated
 protocol HomePresenterDelegate: AnyObject {
-    func fetchSuccess()
+    func showLoading()
+    func removeLoading()
+    func reloadTableView()
+    func showAlert()
+    func showEmptyList()
 }
 
 class HomePresenter {
@@ -15,37 +19,34 @@ class HomePresenter {
         self.homeService = homeService
     }
     
-//MARK: - Functions
-    
+//MARK: - FUNCTIONS -
     func getAnimeList() {
+        self.delegate?.showLoading()
         self.homeService.animeModelService(to: Endpoint.fetchAnimeList.rawValue) { response in
             switch response{
-            case .success(let animeModel):
-                self.animeMapper(animeData: animeModel)
-                self.delegate?.fetchSuccess()
+            case .success(let animeList):
+                self.delegate?.removeLoading()
+                animeList.count > 0 ? self.animeMapper(animeData: animeList) : self.delegate?.showEmptyList()
                 break
             case .failure:
+                self.delegate?.removeLoading()
+                self.delegate?.showAlert()
                 break
             }
-            
         }
     }
-
 }
 
-//MARK: - ObjectMappers
+//MARK: - MAPPER -
 extension HomePresenter {
-
     func animeMapper(animeData: [AnimeModel]) {
         self.animeData = animeData
     }
-    
 }
 
-//MARK: - Cells Builders
+//MARK: - CELL BUILDER -
 
 extension HomePresenter {
-    
     func numberOfModelsRows() -> Int{
         return animeData.count
     }
@@ -59,5 +60,4 @@ extension HomePresenter {
             airedYear: self.animeData[indexPath.row].airedYear)
         return data
     }
-    
 }

@@ -1,8 +1,10 @@
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
 
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var emptyCatalog: UIView!
+    
     private var presenter: HomePresenter?
     
     override func viewDidLoad() {
@@ -15,8 +17,6 @@ class HomeViewController: UIViewController {
     
     private func setupTableView() {
         tableView.register(UINib(nibName: "GenericTableViewCell", bundle: nil), forCellReuseIdentifier: "GenericTableViewCell")
-        tableView.delegate = self
-        tableView.dataSource = self
     }
     
     private func setupPresenter() {
@@ -29,18 +29,14 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: HomePresenterDelegate {
-    func fetchSuccess() {
-        tableView.reloadData() /// Realimentar a tableview com todos seus métodos
-    }
-}
-
+//MARK: - TABLE VIEW DELEGATE -
 extension HomeViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 103
     }
 }
 
+//MARK: - TABLE VIEW DATA SOURCE -
 extension HomeViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.presenter?.numberOfModelsRows() ?? 0
@@ -58,6 +54,30 @@ extension HomeViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        MARK: - TODO
+    }
+}
+
+//MARK: - PRESENTER DELEGATE -
+extension HomeViewController: HomePresenterDelegate {
+    func showEmptyList() {
+        self.emptyCatalog.isHidden = false
+        self.tableView.isHidden = true
+    }
+    
+    func showLoading() {
+        self.showActivityIndicator()
+    }
+    
+    func removeLoading() {
+        self.removeActivityIndicator()
+    }
+    
+    func reloadTableView() {
+        tableView.reloadData() /// Realimentar a tableview com todos seus métodos
+    }
+    
+    func showAlert() {
+        self.showAlert(title: "Atenção", message: "Falha na obtenção do catálogo")
     }
 }
 
