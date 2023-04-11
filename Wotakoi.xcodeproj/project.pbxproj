@@ -23,11 +23,11 @@
 		75B8F8E52577D84E00A12672 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B8F8E42577D84E00A12672 /* NetworkManager.swift */; };
 		75B8F8E72577D86C00A12672 /* AnimeListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B8F8E62577D86C00A12672 /* AnimeListService.swift */; };
 		75B8F8E92577D91600A12672 /* AnimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B8F8E82577D91600A12672 /* AnimeModel.swift */; };
-		8D328A2229E48F4F004E0851 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D328A2129E48F4F004E0851 /* StringUtils.swift */; };
 		8D328A2429E48FFB004E0851 /* StringUtilsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D328A2329E48FFB004E0851 /* StringUtilsSpec.swift */; };
 		8D899B0029E588E000D95F40 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D899AFF29E588E000D95F40 /* BaseViewController.swift */; };
 		8D899B0329E5894900D95F40 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D899B0229E5894900D95F40 /* ActivityIndicatorView.swift */; };
 		8DADAF8D29E44D4700E48BAA /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DADAF8C29E44D4700E48BAA /* UIImage+Extension.swift */; };
+		8DD4B0D629E591A600ECDF7B /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4B0D529E591A600ECDF7B /* StringUtil.swift */; };
 		CBC64CA628DE8DFCD9B148DE /* Pods_Wotakoi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4718065D299CFCC7D917D488 /* Pods_Wotakoi.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,11 +63,11 @@
 		75B8F8E62577D86C00A12672 /* AnimeListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeListService.swift; sourceTree = "<group>"; };
 		75B8F8E82577D91600A12672 /* AnimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeModel.swift; sourceTree = "<group>"; };
 		8D328A1829E481C8004E0851 /* WotakoiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WotakoiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D328A2129E48F4F004E0851 /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringUtils.swift; path = ../../../../Downloads/Curso/Curso/Utils/StringUtils.swift; sourceTree = "<group>"; };
 		8D328A2329E48FFB004E0851 /* StringUtilsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtilsSpec.swift; sourceTree = "<group>"; };
 		8D899AFF29E588E000D95F40 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8D899B0229E5894900D95F40 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		8DADAF8C29E44D4700E48BAA /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		8DD4B0D529E591A600ECDF7B /* StringUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
 		92C288097653AE846D41D53F /* Pods-Wotakoi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wotakoi.debug.xcconfig"; path = "Target Support Files/Pods-Wotakoi/Pods-Wotakoi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,8 +225,8 @@
 		8DADAF8629E447B900E48BAA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				8D328A2129E48F4F004E0851 /* StringUtils.swift */,
 				750C913A257FEF9700CD5230 /* Endpoint.swift */,
+				8DD4B0D529E591A600ECDF7B /* StringUtil.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -440,8 +440,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D899B0029E588E000D95F40 /* BaseViewController.swift in Sources */,
-				8D328A2229E48F4F004E0851 /* StringUtils.swift in Sources */,
 				75B8F8E72577D86C00A12672 /* AnimeListService.swift in Sources */,
+				8DD4B0D629E591A600ECDF7B /* StringUtil.swift in Sources */,
 				7582FA3D255C00A400061920 /* HomeViewController.swift in Sources */,
 				75B8F8E92577D91600A12672 /* AnimeModel.swift in Sources */,
 				750C913B257FEF9700CD5230 /* Endpoint.swift in Sources */,
