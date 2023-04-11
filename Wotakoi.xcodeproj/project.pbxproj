@@ -23,6 +23,9 @@
 		75B8F8E52577D84E00A12672 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B8F8E42577D84E00A12672 /* NetworkManager.swift */; };
 		75B8F8E72577D86C00A12672 /* AnimeListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B8F8E62577D86C00A12672 /* AnimeListService.swift */; };
 		75B8F8E92577D91600A12672 /* AnimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B8F8E82577D91600A12672 /* AnimeModel.swift */; };
+		8D04942A29E5EA7D0020F065 /* StringsUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D04942929E5EA7D0020F065 /* StringsUtilsTests.swift */; };
+		8D04942C29E5F0770020F065 /* HomeViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D04942B29E5F0770020F065 /* HomeViewControllerSpec.swift */; };
+		8D04942E29E5F5CB0020F065 /* HomePresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D04942D29E5F5CB0020F065 /* HomePresenterSpec.swift */; };
 		8D328A2429E48FFB004E0851 /* StringUtilsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D328A2329E48FFB004E0851 /* StringUtilsSpec.swift */; };
 		8D899B0029E588E000D95F40 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D899AFF29E588E000D95F40 /* BaseViewController.swift */; };
 		8D899B0329E5894900D95F40 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D899B0229E5894900D95F40 /* ActivityIndicatorView.swift */; };
@@ -66,6 +69,9 @@
 		75B8F8E82577D91600A12672 /* AnimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeModel.swift; sourceTree = "<group>"; };
 		83EB3084B9FCA4AD8586F95E /* Pods-Wotakoi-WotakoiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wotakoi-WotakoiTests.debug.xcconfig"; path = "Target Support Files/Pods-Wotakoi-WotakoiTests/Pods-Wotakoi-WotakoiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8C652B1405EDEA02E2B0C206 /* Pods_Wotakoi_WotakoiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wotakoi_WotakoiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D04942929E5EA7D0020F065 /* StringsUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringsUtilsTests.swift; sourceTree = "<group>"; };
+		8D04942B29E5F0770020F065 /* HomeViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerSpec.swift; sourceTree = "<group>"; };
+		8D04942D29E5F5CB0020F065 /* HomePresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterSpec.swift; sourceTree = "<group>"; };
 		8D328A1829E481C8004E0851 /* WotakoiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WotakoiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D328A2329E48FFB004E0851 /* StringUtilsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtilsSpec.swift; sourceTree = "<group>"; };
 		8D899AFF29E588E000D95F40 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +213,9 @@
 			isa = PBXGroup;
 			children = (
 				8D328A2329E48FFB004E0851 /* StringUtilsSpec.swift */,
+				8D04942929E5EA7D0020F065 /* StringsUtilsTests.swift */,
+				8D04942B29E5F0770020F065 /* HomeViewControllerSpec.swift */,
+				8D04942D29E5F5CB0020F065 /* HomePresenterSpec.swift */,
 			);
 			path = WotakoiTests;
 			sourceTree = "<group>";
@@ -509,6 +518,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D04942C29E5F0770020F065 /* HomeViewControllerSpec.swift in Sources */,
+				8D04942A29E5EA7D0020F065 /* StringsUtilsTests.swift in Sources */,
+				8D04942E29E5F5CB0020F065 /* HomePresenterSpec.swift in Sources */,
 				8D328A2429E48FFB004E0851 /* StringUtilsSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
