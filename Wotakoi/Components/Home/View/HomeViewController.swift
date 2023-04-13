@@ -5,7 +5,7 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var emptyCatalog: UIView!
     
-    private var presenter: HomePresenter?
+    var presenter: HomePresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()

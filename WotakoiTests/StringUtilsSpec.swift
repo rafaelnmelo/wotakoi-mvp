@@ -1,57 +1,44 @@
-import XCTest
+import Quick
+import Nimble
 @testable import Wotakoi
 
-class StringUtilsSpec: XCTestCase {
-
-    func getSpecialLimit(balance: Double) -> Double {
-        if balance < 100 {
-            return balance + 10
-        } else if balance > 500 {
-            return balance + 1000
+class StringUtilsSpec: QuickSpec {
+     
+    override func spec() {
+        describe("StringUtils") {
+            context("Is Valid Email") {
+                it("Valid Email") {
+                    let email = "curso@gmail.com"
+                    let isValidEmail = email.isValidEmail()
+                    expect(isValidEmail).to(beTrue())
+                }
+                
+                it("Invalid Email") {
+                    let email = "curso"
+                    let isValidEmail = email.isValidEmail()
+                    expect(isValidEmail).to(beFalsy())
+                }
+                
+                it("Invalid Email") {
+                    let email = "curso"
+                    let isValidEmail = email.isValidEmail()
+                    expect(isValidEmail) == false
+                }
+            }
+            
+            context("Remove White Space") {
+                it("With white space") {
+                    let text = "Olá mundo"
+                    let newText = text.removeWhitespace()
+                    expect(newText).to(equal("Olámundo"))
+                }
+                
+                it("Without white space") {
+                    let text = "Olámundo"
+                    let newText = text.removeWhitespace()
+                    expect(newText).to(equal(text))
+                }
+            }
         }
-        
-        return balance
     }
-        
-    func testGetSpecialBalance100() {
-        let specialBalance = getSpecialLimit(balance: 99)
-        
-        XCTAssertEqual(specialBalance, 109, "O saldo menor que 100, deve retornar o saldo + 10")
-    }
-    
-    func testGetSpecialBalance900() {
-        let specialBalance = getSpecialLimit(balance: 900)
-        
-        XCTAssertEqual(specialBalance, 1900, "O saldo maior que 500, deve retornar o saldo + 1000")
-        XCTAssertGreaterThan(specialBalance, 900)
-    }
-    
-    func testGetSpecialBalance400() {
-        let specialBalance = getSpecialLimit(balance: 400)
-        
-        XCTAssertEqual(specialBalance, 400, "O saldo menor que 500 e maior que 100, deve retornar o saldo")
-    }
-    
-    func testIsValidEmail() {
-        let email = "Wotakoi@gmail.com"
-        let value = email.isValidEmail()
-        
-        XCTAssertTrue(value, "\n\nNão é um email válido\n\n")
-        XCTAssert(value == true)
-    }
-    
-    func testRemoveWhiteSpace() {
-        let text = " olá mundo "
-        let newText = text.removeWhitespace()
-        
-        XCTAssertTrue(newText == "olámundo", "\n\nNão removeu os espaços\n\n")
-    }
-    
-    func testReplace() {
-        let text = "Menino"
-        let genderSwap = text.replace(string: "o", replacement: "a")
-        
-        XCTAssertTrue(genderSwap == "Menina", "\n\nTroca não realizada\n\n")
-    }
-
 }
