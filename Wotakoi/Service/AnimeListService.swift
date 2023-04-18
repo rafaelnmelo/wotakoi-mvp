@@ -14,13 +14,14 @@ final class AnimeListService {
         self.networkManager = networkManager
     }
     
-    func animeModelService(to endpoint: String, callback: @escaping (Result<[AnimeModel]>) -> Void ) {
+    func animeModelService(to endpoint: String, callback: @escaping (Result<AnimeModel>) -> Void ) {
         
         self.networkManager.getFromServer(by: endpoint) { response in
+            print(response.data?.prettyPrintedJSON ?? "")
             switch response.result {
             case .success:
                 let decoder = JSONDecoder()
-                guard let jsonData = response.data, let _ = response.value, let animeModel = try?  decoder.decode([AnimeModel].self, from: jsonData) else {
+                guard let jsonData = response.data, let _ = response.value, let animeModel = try?  decoder.decode(AnimeModel.self, from: jsonData) else {
                     callback(.failure(.decodeError))
                     return
                 }

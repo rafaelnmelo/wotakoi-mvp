@@ -2,8 +2,10 @@ import UIKit
 
 class GenericTableViewCellController: UITableViewCell {
     
-    @IBOutlet var animeImg: UIImageView!
-    @IBOutlet var animeTitle: UILabel!
+    @IBOutlet weak var animeImg: UIImageView!
+    @IBOutlet weak var animeTitle: UILabel!
+    @IBOutlet weak var releaseDateLb: UILabel!
+    @IBOutlet weak var ratingLb: UILabel!
     
     var animeID: String?
     var animeSummary: String?
@@ -29,16 +31,19 @@ extension GenericTableViewCellController {
         var picture: String?
         var airedYear: String?
         var genre: String?
+        var rating: String?
     }
     
     func build(data: Content) {
         self.animeID = data.id ?? ""
         self.animeTitle.text = data.name ?? ""
         self.animeSummary = data.summary ?? ""
+        self.releaseDateLb.text = data.airedYear
+        self.ratingLb.text = data.rating
         
-        if let url = data.picture {
-            guard let baseURL = URL(string: "https://i.stack.imgur.com/y9DpT.jpg") else {return}
-            self.downloadImage(from: URL(string: url) ?? baseURL)
+        if let pictureEndpoint = data.picture,
+           let pictureURL = URL(string: BaseURL.imageDomain + "/w300" + pictureEndpoint) {
+            self.animeImg.downloaded(from: pictureURL)
         }
         
         self.animeAiredYear = data.airedYear ?? ""
@@ -49,20 +54,4 @@ extension GenericTableViewCellController {
     
 }
 
-extension GenericTableViewCellController {
-    func getImageData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
-    }
-    
-    func downloadImage(from url: URL) {
-        print("Download Started")
-        getImageData(from: url) { data, response, error in
-            guard let data = data, error == nil else { return }
-            print(response?.suggestedFilename ?? url.lastPathComponent)
-            print("Download Finished")
-            DispatchQueue.main.async() { [weak self] in
-                self?.animeImg.image = UIImage(data: data)
-            }
-        }
-    }
-}
+

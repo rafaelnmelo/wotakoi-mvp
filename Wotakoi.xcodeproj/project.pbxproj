@@ -27,6 +27,8 @@
 		8D04942C29E5F0770020F065 /* HomeViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D04942B29E5F0770020F065 /* HomeViewControllerSpec.swift */; };
 		8D04942E29E5F5CB0020F065 /* HomePresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D04942D29E5F5CB0020F065 /* HomePresenterSpec.swift */; };
 		8D328A2429E48FFB004E0851 /* StringUtilsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D328A2329E48FFB004E0851 /* StringUtilsSpec.swift */; };
+		8D50DE8529EEE265001EA6EF /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D50DE8429EEE265001EA6EF /* Data+Extension.swift */; };
+		8D50DE8729EEEBF4001EA6EF /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D50DE8629EEEBF4001EA6EF /* UIImageView+Extension.swift */; };
 		8D5399E329E8970E009EC7FF /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5399E229E8970E009EC7FF /* HomeViewControllerTests.swift */; };
 		8D899B0029E588E000D95F40 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D899AFF29E588E000D95F40 /* BaseViewController.swift */; };
 		8D899B0329E5894900D95F40 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D899B0229E5894900D95F40 /* ActivityIndicatorView.swift */; };
@@ -75,6 +77,8 @@
 		8D04942D29E5F5CB0020F065 /* HomePresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterSpec.swift; sourceTree = "<group>"; };
 		8D328A1829E481C8004E0851 /* WotakoiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WotakoiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D328A2329E48FFB004E0851 /* StringUtilsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtilsSpec.swift; sourceTree = "<group>"; };
+		8D50DE8429EEE265001EA6EF /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		8D50DE8629EEEBF4001EA6EF /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		8D5399E229E8970E009EC7FF /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		8D899AFF29E588E000D95F40 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8D899B0229E5894900D95F40 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
@@ -287,6 +291,8 @@
 			isa = PBXGroup;
 			children = (
 				8DADAF8C29E44D4700E48BAA /* UIImage+Extension.swift */,
+				8D50DE8429EEE265001EA6EF /* Data+Extension.swift */,
+				8D50DE8629EEEBF4001EA6EF /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -502,6 +508,7 @@
 			files = (
 				8D899B0029E588E000D95F40 /* BaseViewController.swift in Sources */,
 				75B8F8E72577D86C00A12672 /* AnimeListService.swift in Sources */,
+				8D50DE8529EEE265001EA6EF /* Data+Extension.swift in Sources */,
 				8DD4B0D629E591A600ECDF7B /* StringUtil.swift in Sources */,
 				7582FA3D255C00A400061920 /* HomeViewController.swift in Sources */,
 				75B8F8E92577D91600A12672 /* AnimeModel.swift in Sources */,
@@ -509,6 +516,7 @@
 				750C913F257FFC3400CD5230 /* Response.swift in Sources */,
 				7582FA39255C00A400061920 /* AppDelegate.swift in Sources */,
 				75B8F8E52577D84E00A12672 /* NetworkManager.swift in Sources */,
+				8D50DE8729EEEBF4001EA6EF /* UIImageView+Extension.swift in Sources */,
 				7582FA3B255C00A400061920 /* SceneDelegate.swift in Sources */,
 				7582FA78255C043B00061920 /* GenericTableViewCellController.swift in Sources */,
 				8DADAF8D29E44D4700E48BAA /* UIImage+Extension.swift in Sources */,

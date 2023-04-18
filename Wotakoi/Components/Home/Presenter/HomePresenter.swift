@@ -3,9 +3,9 @@ import UIKit
 protocol HomePresenterDelegate: AnyObject {
     func showLoading()
     func removeLoading()
-    func reloadTableView()
     func showAlert()
     func showEmptyList()
+    func showAnimeList()
 }
 
 class HomePresenter {
@@ -13,7 +13,8 @@ class HomePresenter {
     private let homeService: AnimeListService
     weak var delegate: HomePresenterDelegate? /// weak em delegate evita memory leak pois evita retenção de ciclos
     
-    var animeData = [AnimeModel]()
+    var animeData: AnimeModel?
+    var animeList: [Anime]?
     
     init(homeService: AnimeListService = AnimeListService()) {
         self.homeService = homeService
@@ -26,7 +27,7 @@ class HomePresenter {
             switch response{
             case .success(let animeList):
                 self.delegate?.removeLoading()
-                animeList.count > 0 ? self.animeMapper(animeData: animeList) : self.delegate?.showEmptyList()
+                animeList.results?.count ?? 0 > 0 ? self.fillData(animeList: animeList) : self.delegate?.showEmptyList()
                 break
             case .failure:
                 self.delegate?.removeLoading()
@@ -35,12 +36,19 @@ class HomePresenter {
             }
         }
     }
+    
+    func fillData(animeList: AnimeModel) {
+        self.animeMapper(animeData: animeList)
+        self.delegate?.showAnimeList()
+    }
 }
 
 //MARK: - MAPPER -
 extension HomePresenter {
-    func animeMapper(animeData: [AnimeModel]) {
+    func animeMapper(animeData: AnimeModel) {
         self.animeData = animeData
+        let results = animeData.results
+        self.animeList = results?.filter( { $0.genreIds!.contains(16) } )
     }
 }
 
@@ -48,16 +56,17 @@ extension HomePresenter {
 
 extension HomePresenter {
     func numberOfModelsRows() -> Int{
-        return animeData.count
+        return animeList?.count ?? 0
     }
     
     func animeForRow(at indexPath: IndexPath) -> GenericTableViewCellController.Content{
         let data = GenericTableViewCellController.Content(
-            id: self.animeData[indexPath.row].id,
-            name: self.animeData[indexPath.row].name,
-            summary: self.animeData[indexPath.row].summary,
-            picture: self.animeData[indexPath.row].picture,
-            airedYear: self.animeData[indexPath.row].airedYear)
+            id: "\(self.animeList?[indexPath.row].id ?? 0)" ,
+            name: self.animeList?[indexPath.row].title,
+            summary: self.animeList?[indexPath.row].overview,
+            picture: self.animeList?[indexPath.row].backdropPath,
+            airedYear: self.animeList?[indexPath.row].releaseDate,
+            rating: "\(Float(self.animeList?[indexPath.row].voteAverage ?? 0))")
         return data
     }
 }

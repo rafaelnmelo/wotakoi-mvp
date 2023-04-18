@@ -12,6 +12,9 @@ class HomeViewController: BaseViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         setupTableView()
         setupPresenter()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         getTemplate()
     }
     
@@ -34,6 +37,10 @@ extension HomeViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 103
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        MARK: - TODO
+    }
 }
 
 //MARK: - TABLE VIEW DATA SOURCE -
@@ -50,10 +57,6 @@ extension HomeViewController: UITableViewDataSource{
             }
         }
         return UITableViewCell()
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        MARK: - TODO
     }
 }
 
@@ -72,8 +75,10 @@ extension HomeViewController: HomePresenterDelegate {
         self.removeActivityIndicator()
     }
     
-    func reloadTableView() {
-        tableView.reloadData() /// Realimentar a tableview com todos seus métodos
+    func showAnimeList() {
+        self.tableView.reloadData() /// Realimentar a tableview com todos seus métodos
+        self.emptyCatalog.isHidden = true
+        self.tableView.isHidden = false
     }
     
     func showAlert() {
